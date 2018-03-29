@@ -23,5 +23,10 @@ namespace capaNegocio
             return objDato.D_listado();
         }
 
+        public void N_Insertar(E_Empleados emp)
+        {
+            objDato.D_insertar(emp);
+        }
+
     }
 }

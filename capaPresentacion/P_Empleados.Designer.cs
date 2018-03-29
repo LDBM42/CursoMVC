@@ -30,6 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edadEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexoEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sueldoEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,11 +51,62 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codEmp,
+            this.nomEmp,
+            this.edadEmp,
+            this.sexoEmp,
+            this.sueldoEmp});
             this.dataGridView1.Location = new System.Drawing.Point(28, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(588, 283);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // codEmp
+            // 
+            this.codEmp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.codEmp.DataPropertyName = "codEmp";
+            this.codEmp.FillWeight = 15F;
+            this.codEmp.HeaderText = "Código";
+            this.codEmp.Name = "codEmp";
+            this.codEmp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nomEmp
+            // 
+            this.nomEmp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomEmp.DataPropertyName = "nomEmp";
+            this.nomEmp.FillWeight = 35F;
+            this.nomEmp.HeaderText = "Nombre";
+            this.nomEmp.Name = "nomEmp";
+            this.nomEmp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // edadEmp
+            // 
+            this.edadEmp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.edadEmp.DataPropertyName = "edadEmp";
+            this.edadEmp.FillWeight = 25F;
+            this.edadEmp.HeaderText = "Edad";
+            this.edadEmp.Name = "edadEmp";
+            this.edadEmp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // sexoEmp
+            // 
+            this.sexoEmp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sexoEmp.DataPropertyName = "sexoEmp";
+            this.sexoEmp.FillWeight = 25F;
+            this.sexoEmp.HeaderText = "Sexo";
+            this.sexoEmp.Name = "sexoEmp";
+            this.sexoEmp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // sueldoEmp
+            // 
+            this.sueldoEmp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sueldoEmp.DataPropertyName = "sueldoEmp";
+            this.sueldoEmp.FillWeight = 25F;
+            this.sueldoEmp.HeaderText = "Sueldo";
+            this.sueldoEmp.Name = "sueldoEmp";
+            this.sueldoEmp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // P_Empleados
             // 
@@ -72,6 +128,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn edadEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexoEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sueldoEmp;
     }
 }
 

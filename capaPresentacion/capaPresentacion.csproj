@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="P_Mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_Mantenimiento.Designer.cs">
+      <DependentUpon>P_Mantenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="P_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     </Compile>
     <EmbeddedResource Include="P_Empleados.resx">
       <DependentUpon>P_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_Mantenimiento.resx">
+      <DependentUpon>P_Mantenimiento.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
