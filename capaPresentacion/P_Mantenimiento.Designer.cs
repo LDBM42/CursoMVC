@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(P_Mantenimiento));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +48,8 @@
             this.edadEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexoEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sueldoEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Datos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,7 +156,9 @@
             this.nomEmp,
             this.edadEmp,
             this.sexoEmp,
-            this.sueldoEmp});
+            this.sueldoEmp,
+            this.Eliminar,
+            this.Editar});
             this.dgv_Datos.Location = new System.Drawing.Point(234, 74);
             this.dgv_Datos.Name = "dgv_Datos";
             this.dgv_Datos.RowTemplate.Height = 24;
@@ -196,7 +201,7 @@
             // 
             this.nomEmp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nomEmp.DataPropertyName = "nomEmp";
-            this.nomEmp.FillWeight = 35F;
+            this.nomEmp.FillWeight = 40F;
             this.nomEmp.HeaderText = "Nombre";
             this.nomEmp.Name = "nomEmp";
             this.nomEmp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -205,7 +210,7 @@
             // 
             this.edadEmp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.edadEmp.DataPropertyName = "edadEmp";
-            this.edadEmp.FillWeight = 25F;
+            this.edadEmp.FillWeight = 10F;
             this.edadEmp.HeaderText = "Edad";
             this.edadEmp.Name = "edadEmp";
             this.edadEmp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -214,7 +219,7 @@
             // 
             this.sexoEmp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.sexoEmp.DataPropertyName = "sexoEmp";
-            this.sexoEmp.FillWeight = 25F;
+            this.sexoEmp.FillWeight = 10F;
             this.sexoEmp.HeaderText = "Sexo";
             this.sexoEmp.Name = "sexoEmp";
             this.sexoEmp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -223,10 +228,28 @@
             // 
             this.sueldoEmp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.sueldoEmp.DataPropertyName = "sueldoEmp";
-            this.sueldoEmp.FillWeight = 25F;
+            this.sueldoEmp.FillWeight = 20F;
             this.sueldoEmp.HeaderText = "Sueldo";
             this.sueldoEmp.Name = "sueldoEmp";
             this.sueldoEmp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Eliminar.FillWeight = 15F;
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Eliminar.Name = "Eliminar";
+            // 
+            // Editar
+            // 
+            this.Editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Editar.FillWeight = 15F;
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
+            this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Editar.Name = "Editar";
             // 
             // P_Mantenimiento
             // 
@@ -277,5 +300,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn edadEmp;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexoEmp;
         private System.Windows.Forms.DataGridViewTextBoxColumn sueldoEmp;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
     }
 }
