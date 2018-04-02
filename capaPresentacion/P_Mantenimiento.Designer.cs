@@ -41,8 +41,6 @@
             this.tbx_Sexo = new System.Windows.Forms.TextBox();
             this.tbx_Sueldo = new System.Windows.Forms.TextBox();
             this.dgv_Datos = new System.Windows.Forms.DataGridView();
-            this.btn_Insertar = new System.Windows.Forms.Button();
-            this.btn_Editar = new System.Windows.Forms.Button();
             this.codEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edadEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +48,9 @@
             this.sueldoEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btn_Insertar = new System.Windows.Forms.Button();
+            this.btn_Editar = new System.Windows.Forms.Button();
+            this.btn_Limpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Datos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,30 +167,6 @@
             this.dgv_Datos.TabIndex = 12;
             this.dgv_Datos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Datos_CellContentClick);
             // 
-            // btn_Insertar
-            // 
-            this.btn_Insertar.AutoSize = true;
-            this.btn_Insertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Insertar.Location = new System.Drawing.Point(460, 289);
-            this.btn_Insertar.Name = "btn_Insertar";
-            this.btn_Insertar.Size = new System.Drawing.Size(220, 30);
-            this.btn_Insertar.TabIndex = 13;
-            this.btn_Insertar.Text = "Insertar";
-            this.btn_Insertar.UseVisualStyleBackColor = true;
-            this.btn_Insertar.Click += new System.EventHandler(this.btn_Insertar_Click);
-            // 
-            // btn_Editar
-            // 
-            this.btn_Editar.AutoSize = true;
-            this.btn_Editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Editar.Location = new System.Drawing.Point(702, 289);
-            this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.Size = new System.Drawing.Size(220, 30);
-            this.btn_Editar.TabIndex = 14;
-            this.btn_Editar.Text = "Editar";
-            this.btn_Editar.UseVisualStyleBackColor = true;
-            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
-            // 
             // codEmp
             // 
             this.codEmp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -253,11 +230,48 @@
             this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Editar.Name = "Editar";
             // 
+            // btn_Insertar
+            // 
+            this.btn_Insertar.AutoSize = true;
+            this.btn_Insertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Insertar.Location = new System.Drawing.Point(234, 294);
+            this.btn_Insertar.Name = "btn_Insertar";
+            this.btn_Insertar.Size = new System.Drawing.Size(220, 30);
+            this.btn_Insertar.TabIndex = 13;
+            this.btn_Insertar.Text = "Insertar";
+            this.btn_Insertar.UseVisualStyleBackColor = true;
+            this.btn_Insertar.Click += new System.EventHandler(this.btn_Insertar_Click);
+            // 
+            // btn_Editar
+            // 
+            this.btn_Editar.AutoSize = true;
+            this.btn_Editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Editar.Location = new System.Drawing.Point(468, 294);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(220, 30);
+            this.btn_Editar.TabIndex = 14;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
+            // 
+            // btn_Limpiar
+            // 
+            this.btn_Limpiar.AutoSize = true;
+            this.btn_Limpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Limpiar.Location = new System.Drawing.Point(702, 294);
+            this.btn_Limpiar.Name = "btn_Limpiar";
+            this.btn_Limpiar.Size = new System.Drawing.Size(220, 30);
+            this.btn_Limpiar.TabIndex = 15;
+            this.btn_Limpiar.Text = "Limpiar";
+            this.btn_Limpiar.UseVisualStyleBackColor = true;
+            this.btn_Limpiar.Click += new System.EventHandler(this.btn_Limpiar_Click);
+            // 
             // P_Mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 350);
+            this.Controls.Add(this.btn_Limpiar);
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Insertar);
             this.Controls.Add(this.dgv_Datos);
@@ -273,7 +287,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "P_Mantenimiento";
-            this.Text = "Form1";
+            this.Text = "Mantenimiento de Datos";
             this.Load += new System.EventHandler(this.P_Mantenimiento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Datos)).EndInit();
             this.ResumeLayout(false);
@@ -304,5 +318,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sueldoEmp;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.Button btn_Limpiar;
     }
 }

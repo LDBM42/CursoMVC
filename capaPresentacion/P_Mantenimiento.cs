@@ -116,5 +116,10 @@ namespace capaPresentacion
 
             MessageBox.Show("Registro Editado con exito");
         }
+
+        private void btn_Limpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
     }
 }
