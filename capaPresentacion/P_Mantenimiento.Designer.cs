@@ -164,6 +164,7 @@
             this.dgv_Datos.RowTemplate.Height = 24;
             this.dgv_Datos.Size = new System.Drawing.Size(689, 198);
             this.dgv_Datos.TabIndex = 12;
+            this.dgv_Datos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Datos_CellContentClick);
             // 
             // btn_Insertar
             // 

@@ -25,7 +25,12 @@ namespace capaNegocio
 
         public void N_Insertar(E_Empleados emp)
         {
-            objDato.D_insertar(emp);
+            objDato.D_insertar(emp); //pasamos el objeto de la capa E_Empleados como parametro al metodo D_insertar.
+        }
+
+        public void N_Eliminar(E_Empleados emp)
+        {
+            objDato.D_eliminar(emp);
         }
 
     }

@@ -43,5 +43,22 @@ namespace capaDatos
             cmd.ExecuteNonQuery(); // Ejecutar la consulta en el procedimiento almacenado
             cn.Close();
         }
+
+        public void D_eliminar(E_Empleados emp)
+        {
+            SqlCommand cmd = new SqlCommand("sp_eliminar", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            //llenado de los parametros del procedimiento almacenado (estos se colocan con "@" 
+            //y se llenan con el valor ingresado despues de la coma.  "@cod", emp.cod
+            cmd.Parameters.AddWithValue("@cod", emp.cod);
+
+            if (cn.State == ConnectionState.Open) cn.Close();
+
+            cn.Open();
+            cmd.ExecuteNonQuery(); // Ejecutar la consulta en el procedimiento almacenado
+            cn.Close();
+        }
+
+
     }
 }

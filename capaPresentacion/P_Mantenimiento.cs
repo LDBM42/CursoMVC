@@ -61,5 +61,20 @@ namespace capaPresentacion
             tbx_Sexo.Text = "";
             tbx_sueldo.Text = "";
         }
+
+        private void dgv_Datos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /*Este condicional pregunta cual de las imagenes o botones hemos presionando
+              Especificamente, pregunta si presionamos la celda "Eliminar" del DataGridView "dgv_Datos"*/
+            if(dgv_Datos.Rows[e.RowIndex].Cells["Eliminar"].Selected)
+            {
+                /*Para saber cual es el código de la fila a la que le hicimos clic usamos este código que dice:
+                 almacena en objEntidad.cod el código que está en la Celda "CodEmp" de la Fila a la que se le
+                 hizo clic ".Row[e.RowIndex].Cells" del DatagridView "dgv_Datos" */
+                objEntidad.cod = Convert.ToInt32(dgv_Datos.Rows[e.RowIndex].Cells["CodEmp"].Value.ToString());
+                //Recargar el DataGridView con los datos del objeto Entidad
+                objNego.N_Eliminar(objEntidad);
+            }
+        }
     }
 }
