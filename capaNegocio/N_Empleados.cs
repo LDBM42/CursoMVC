@@ -33,5 +33,9 @@ namespace capaNegocio
             objDato.D_eliminar(emp);
         }
 
+        public void N_Editar(E_Empleados emp)
+        {
+            objDato.D_editar(emp);
+        }
     }
 }

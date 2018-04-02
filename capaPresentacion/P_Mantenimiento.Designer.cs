@@ -39,7 +39,7 @@
             this.tbx_Nom = new System.Windows.Forms.TextBox();
             this.tbx_Edad = new System.Windows.Forms.TextBox();
             this.tbx_Sexo = new System.Windows.Forms.TextBox();
-            this.tbx_sueldo = new System.Windows.Forms.TextBox();
+            this.tbx_Sueldo = new System.Windows.Forms.TextBox();
             this.dgv_Datos = new System.Windows.Forms.DataGridView();
             this.btn_Insertar = new System.Windows.Forms.Button();
             this.btn_Editar = new System.Windows.Forms.Button();
@@ -141,12 +141,12 @@
             this.tbx_Sexo.Size = new System.Drawing.Size(100, 22);
             this.tbx_Sexo.TabIndex = 10;
             // 
-            // tbx_sueldo
+            // tbx_Sueldo
             // 
-            this.tbx_sueldo.Location = new System.Drawing.Point(110, 250);
-            this.tbx_sueldo.Name = "tbx_sueldo";
-            this.tbx_sueldo.Size = new System.Drawing.Size(100, 22);
-            this.tbx_sueldo.TabIndex = 11;
+            this.tbx_Sueldo.Location = new System.Drawing.Point(110, 250);
+            this.tbx_Sueldo.Name = "tbx_Sueldo";
+            this.tbx_Sueldo.Size = new System.Drawing.Size(100, 22);
+            this.tbx_Sueldo.TabIndex = 11;
             // 
             // dgv_Datos
             // 
@@ -188,6 +188,7 @@
             this.btn_Editar.TabIndex = 14;
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // codEmp
             // 
@@ -260,7 +261,7 @@
             this.Controls.Add(this.btn_Editar);
             this.Controls.Add(this.btn_Insertar);
             this.Controls.Add(this.dgv_Datos);
-            this.Controls.Add(this.tbx_sueldo);
+            this.Controls.Add(this.tbx_Sueldo);
             this.Controls.Add(this.tbx_Sexo);
             this.Controls.Add(this.tbx_Edad);
             this.Controls.Add(this.tbx_Nom);
@@ -292,7 +293,7 @@
         private System.Windows.Forms.TextBox tbx_Nom;
         private System.Windows.Forms.TextBox tbx_Edad;
         private System.Windows.Forms.TextBox tbx_Sexo;
-        private System.Windows.Forms.TextBox tbx_sueldo;
+        private System.Windows.Forms.TextBox tbx_Sueldo;
         private System.Windows.Forms.DataGridView dgv_Datos;
         private System.Windows.Forms.Button btn_Insertar;
         private System.Windows.Forms.Button btn_Editar;

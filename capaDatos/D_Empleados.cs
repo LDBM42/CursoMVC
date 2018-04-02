@@ -59,6 +59,24 @@ namespace capaDatos
             cn.Close();
         }
 
+        public void D_editar(E_Empleados emp) //insertar Datos (recibe la clase E_Empleados como parametro)
+        {
+            SqlCommand cmd = new SqlCommand("sp_editar", cn);
+            //Se indica que el tipo de comando es un procedimiento almacenado
+            cmd.CommandType = CommandType.StoredProcedure;
+            //llenado de los parametros del procedimiento almacenado (estos se colocan con "@" 
+            //y se llenan con el valor ingresado despues de la coma.  "@nom", emp.nom
+            cmd.Parameters.AddWithValue("@cod", emp.cod);
+            cmd.Parameters.AddWithValue("@nom", emp.nom);
+            cmd.Parameters.AddWithValue("@edad", emp.edad);
+            cmd.Parameters.AddWithValue("@sexo", emp.sexo);
+            cmd.Parameters.AddWithValue("@sue", emp.sueldo);
 
+            if (cn.State == ConnectionState.Open) cn.Close();
+
+            cn.Open();
+            cmd.ExecuteNonQuery(); // Ejecutar la consulta en el procedimiento almacenado
+            cn.Close();
+        }
     }
 }

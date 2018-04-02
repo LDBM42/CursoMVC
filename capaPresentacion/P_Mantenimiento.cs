@@ -46,7 +46,7 @@ namespace capaPresentacion
             objEntidad.nom = tbx_Nom.Text;
             objEntidad.edad = Convert.ToInt32(tbx_Edad.Text);
             objEntidad.sexo = tbx_Sexo.Text;
-            objEntidad.sueldo = Convert.ToDouble(tbx_sueldo.Text);
+            objEntidad.sueldo = Convert.ToDouble(tbx_Sueldo.Text);
 
             objNego.N_Insertar(objEntidad);
 
@@ -59,7 +59,7 @@ namespace capaPresentacion
             tbx_Edad.Text = "";
             tbx_Nom.Text = "";
             tbx_Sexo.Text = "";
-            tbx_sueldo.Text = "";
+            tbx_Sueldo.Text = "";
         }
 
         private void dgv_Datos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -68,13 +68,53 @@ namespace capaPresentacion
               Especificamente, pregunta si presionamos la celda "Eliminar" del DataGridView "dgv_Datos"*/
             if(dgv_Datos.Rows[e.RowIndex].Cells["Eliminar"].Selected)
             {
-                /*Para saber cual es el código de la fila a la que le hicimos clic usamos este código que dice:
+                DialogResult Respuesta = MessageBox.Show("Está seguro de Eliminar el Registro?", "Advertencia", MessageBoxButtons.YesNo);
+                if (Respuesta == DialogResult.Yes) // si la respuesta es si
+                {
+                    /*Para saber cual es el código de la fila a la que le hicimos clic usamos este código que dice:
                  almacena en objEntidad.cod el código que está en la Celda "CodEmp" de la Fila a la que se le
                  hizo clic ".Row[e.RowIndex].Cells" del DatagridView "dgv_Datos" */
-                objEntidad.cod = Convert.ToInt32(dgv_Datos.Rows[e.RowIndex].Cells["CodEmp"].Value.ToString());
-                //Recargar el DataGridView con los datos del objeto Entidad
-                objNego.N_Eliminar(objEntidad);
+                    objEntidad.cod = Convert.ToInt32(dgv_Datos.Rows[e.RowIndex].Cells["CodEmp"].Value.ToString());
+                    //Recargar el DataGridView con los datos del objeto Entidad
+                    objNego.N_Eliminar(objEntidad);
+
+                    ListarEmpleado();
+                }
+                else
+                {
+                    dgv_Datos.Rows[e.RowIndex].Cells["Eliminar"].Selected = false;
+                }
             }
+            else if(dgv_Datos.Rows[e.RowIndex].Cells["Editar"].Selected)
+            {
+                /*llenamos cada uno de los campos de texto con el codigo, nombre, edad, etc. de la Celda de
+                  la Fila a la que se le hizo clic.*/
+                tbx_Cod.Text = dgv_Datos.Rows[e.RowIndex].Cells["codEmp"].Value.ToString();
+                tbx_Nom.Text = dgv_Datos.Rows[e.RowIndex].Cells["nomEmp"].Value.ToString();
+                tbx_Edad.Text = dgv_Datos.Rows[e.RowIndex].Cells["edadEmp"].Value.ToString();
+                tbx_Sexo.Text = dgv_Datos.Rows[e.RowIndex].Cells["sexoEmp"].Value.ToString();
+                tbx_Sueldo.Text = dgv_Datos.Rows[e.RowIndex].Cells["sueldoEmp"].Value.ToString();
+            }
+        }
+
+        private void btn_Editar_Click(object sender, EventArgs e)
+        {
+            editar();
+            Limpiar();
+            ListarEmpleado();
+        }
+
+        void editar()
+        {
+            objEntidad.cod = Convert.ToInt32(tbx_Cod.Text);
+            objEntidad.nom = tbx_Nom.Text;
+            objEntidad.edad = Convert.ToInt32(tbx_Edad.Text);
+            objEntidad.sexo = tbx_Sexo.Text;
+            objEntidad.sueldo = Convert.ToDouble(tbx_Sueldo.Text);
+
+            objNego.N_Editar(objEntidad);
+
+            MessageBox.Show("Registro Editado con exito");
         }
     }
 }
